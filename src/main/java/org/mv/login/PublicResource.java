@@ -1,3 +1,5 @@
+package org.mv.login;
+
 import jakarta.annotation.security.PermitAll;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;

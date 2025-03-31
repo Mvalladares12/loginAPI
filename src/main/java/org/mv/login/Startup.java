@@ -1,3 +1,5 @@
+package org.mv.login;
+
 import io.quarkus.runtime.StartupEvent;
 import jakarta.enterprise.event.Observes;
 import jakarta.inject.Singleton;
