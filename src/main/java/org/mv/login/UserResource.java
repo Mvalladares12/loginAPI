@@ -30,12 +30,13 @@ public class UserResource {
 //    }
 
     @GET
-    @RolesAllowed({"admin", "user"})
-    public String getAuthInfo(@Context HttpHeaders headers) {
+    @RolesAllowed({"admin", "writer"})
+    public boolean getAuthInfo(@Context HttpHeaders headers, @Context SecurityContext securityContext) {
         // Obtener el header de Authorization
+        boolean val=securityContext.isUserInRole("writer");
         String authHeader = headers.getHeaderString(HttpHeaders.AUTHORIZATION);
 
-        String token=authHeader.substring(6);
-            return token;
+        //return authHeader.substring(6);
+        return val;
     }
 }

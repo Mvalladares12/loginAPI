@@ -13,6 +13,6 @@ public class Startup {
         // reset and load all test users
         User.deleteAll();
         User.add("admin", "admin", "admin");
-        User.add("user", "user", "user");
+        User.add("main", "main", "writer");
     }
 }
